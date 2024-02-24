@@ -21,4 +21,9 @@ class Customer extends Model
         $this->attributes['password'] = Hash::make($value);
     }
 
+    public function orders()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
 }
